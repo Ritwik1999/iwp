@@ -1,0 +1,75 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: gray;
+  overflow: hidden;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.main-content {
+  width: 80%;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+}
+
+.main-content h1 {
+  text-align: center;
+}
+
+.menu {
+  margin-top: 50px;
+  margin-bottom: 25px;
+  font-size: 1.2rem;
+}
+
+.menu span {
+  display: inline-block;
+  margin-right: 3px;
+  background-color: black;
+  color: white;
+  padding: 0 20px;
+}
+
+.content img {
+  float: left;
+  vertical-align: top;
+}
+
+.content .score {
+  float: left;
+  line-height: 135px;
+  background-color: green;
+  color: white;
+  width: 100px;
+  margin: 5px;
+  font-size: 60px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.content .metascore {
+  font-size: 40px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.content .more-info {
+  font-size: 1.5rem;
+}
+
+.content .more-info .accolade {
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+
+.content .more-info ul {
+  margin-left: 350px;
+  margin-top: 80px;
+  line-height: 30px;
+}

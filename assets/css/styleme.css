@@ -1,0 +1,19 @@
+h2 {
+    color: blueviolet;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3em;
+    font-weight: 300;
+}
+
+address {
+    color: brown;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em;
+    font-weight: 200;
+}
+
+section#skill-list {
+    border: 1px solid black;
+    text-align: center;
+    background-color: gray;
+}

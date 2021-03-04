@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Document</title>
+    <style>
+        table {
+            margin: auto;
+            border: 1px solid black;
+            border-collapse: collapse;
+            background-color: #f7f7f7;
+        }
+        td {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td colspan="2" style="background-color: #c1c1c1; padding-right: 30px; text-align: right;">
+                <b>The World of Fruit</b>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" style="padding-right: 50px; text-align: right;">
+                <b>Fruit Survey</b>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="text-align: right;">Name</td>
+            <td style="padding-right: 50px;">
+                <input type="text" name="name">
+            </td>
+        </tr>
+
+        <tr>
+            <td style="text-align: right;">Address</td>
+            <td style="padding-right: 50px;">
+                <input type="text" name="address">
+            </td>
+        </tr>
+
+        <tr>
+            <td style="text-align: right;">Email</td>
+            <td style="padding-right: 50px;">
+                <input type="email" name="email">
+            </td>
+        </tr>
+
+        <tr>
+            <td style="text-align: right; vertical-align: top;">
+                How many pieces of fruit
+                <br>do you eat per day?
+            </td>
+            <td style="padding-right: 50px;">
+                <label for="radiobtn1"><input type="radio" name="0" id="radiobtn1"> 0</label><br>
+                <label for="radiobtn2"><input type="radio" name="1" id="radiobtn2"> 1</label><br>
+                <label for="radiobtn3"><input type="radio" name="2" id="radiobtn3"> 2</label><br>
+                <label for="radiobtn4"><input type="radio" name="morethan2" id="radiobtn4"> More than 2</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="text-align: right; vertical-align: top;">My favourite fruit</td>
+            <td style="padding-right: 50px;">
+                <select size="4">
+                    <option value="Apple">Apple</option>
+                    <option value="Banana">Banana</option>
+                    <option value="Plum">Plum</option>
+                    <option value="Pomegranate">Pomegranate</option>
+                    <option value="Peach">Peach</option>
+                    <option value="Orange">Orange</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="text-align: right;">
+                Would you like a <br>brochure?
+            </td>
+            <td style="padding-right: 50px;">
+                <input type="checkbox" name="brochure">
+            </td>
+        </tr>
+
+        <tr>
+            <td style="text-align: right;"></td>
+            <td style="padding-right: 50px;">
+                <button type="submit">Submit</button>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

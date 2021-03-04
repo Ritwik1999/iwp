@@ -1,0 +1,71 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.main-content {
+  height: 100%;
+}
+
+.top-box {
+  height: 30%;
+  background-image: url(../topbanner.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 6rem;
+  color: black;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.bottom-box {
+  height: 70%;
+}
+
+.navigation-box {
+  float: left;
+  height: 100%;
+  width: 30%;
+  background-color: yellow;
+  text-align: center;
+  position: relative;
+}
+
+.links {
+  padding-top: 200px;
+}
+
+.link {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  text-decoration: none;
+}
+
+.link:hover {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+
+.content-box {
+  height: 100%;
+  float: left;
+  width: 70%;
+  background-color: red;
+  text-align: center;
+  padding-top: 250px;
+  font-size: x-large;
+  line-height: 50px;
+}
