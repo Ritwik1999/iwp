@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ex9</title>
+</head>
+
+<body>
+    <h1>Image using Canvas Tag: </h1>
+    <div style="display: flex; flex-direction: row;">
+        <div>
+            <p>Image:</p>
+            <img id="tree" width="220" height="277"
+                src="./assets/walle.jpg" alt="The Tree">
+        </div>
+        <div style="margin-left: 20px">
+            <p>Canvas:</p>
+            <canvas id="myCanvas" width="220" height="277">
+            </canvas>
+        </div>
+    </div>
+    <div><button onclick="draw()">Try it</button></div>
+    <h1>The video element: </h1>
+
+    <video width="320" height="240" controls>
+        <source src="/home/ritwik/Desktop/Sem 6/SIN/Lectures/Lecture.mp4" type="video/mp4"> Your browser does not support the video tag.
+    </video>
+
+    <script>
+        function draw() {
+            var c = document.getElementById("myCanvas"); var ctx = c.getContext("2d");
+            var img = document.getElementById("tree"); ctx.drawImage(img, 15, 15);
+        }
+    </script>
+</body>
+
+</html>
