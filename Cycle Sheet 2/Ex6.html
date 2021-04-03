@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="font-size: larger;">
+    <main>
+        <label for="hours">
+            Enter number of hours:
+            <input type="text" id="hours">
+        </label>
+        <button onclick="calculate_Charges()">Calculate fare</button>
+        <p></p>
+    </main>
+
+    <script type="text/javascript">
+        let charge_so_far = 0;
+        function calculate_Charges() {
+            let inputEle = document.getElementsByTagName("input")[0];
+            let hours = parseInt(inputEle.value);
+            let charge = 0;
+            let msgArea = document.getElementsByTagName("p")[0];
+
+            if (hours) {
+                charge += 2;
+                hours -= 3;
+                while (hours > 0) {
+                    charge += 0.50;
+                    hours -= 1;
+                }
+                charge = Math.min(charge, 10);
+                charge_so_far += charge;
+            }
+
+            msgArea.innerText = "Current Charge: $" + charge + "\nRunning Total: $" + charge_so_far;
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex4</title>
+</head>
+
+<body style="font-size: x-large;">
+    <script type="text/javascript">
+
+        let s = new Set();
+
+        function isHappy(num) {
+            let sum = 0;
+            while (num != 0) {
+                sum += Math.pow(num % 10, 2);
+                num = Math.floor(num / 10);
+            }
+
+            if (sum == 1) {
+                s.clear();
+                return true;
+            }
+
+            else {
+                if (s.has(sum)) {
+                    return false;
+                }
+
+                s.add(sum);
+                return isHappy(sum);
+            }
+        }
+
+        let count = prompt("How many happy numbers do you want to print?", 0);
+        count = parseInt(count);
+        let counter = 0;
+        let num = 1;
+        document.writeln("The first " + count + " happy numbers are: ");
+        while (counter != count) {
+            if (isHappy(num)) {
+                document.writeln(num);
+                counter++;
+            }
+            num++;
+        }
+    </script>
+</body>
+
+</html>

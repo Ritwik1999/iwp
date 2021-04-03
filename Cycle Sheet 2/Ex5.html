@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/cs2q5.css">
+    <title>Ex5</title>
+</head>
+
+<body>
+
+    <main>
+        <div class="top-row">
+            <div class="row">
+                <section class="left">
+                    <img src="../assets/cricket.jpg" alt="Cricket">
+                </section>
+                <section class="right">
+                    <p class="text-area"></p>
+                </section>
+            </div>
+        </div>
+        <div class="bottom-row">
+            <button onclick="changePic()">Change Pic</button>
+            <div class="line">
+                <p>Select the image position</p>
+                <label>Left <input type="radio" name="position" value="left" checked
+                        onchange="changePosition(1)"></label>
+                <label>Right <input type="radio" name="position" value="right" onchange="changePosition(2)"></label>
+                <label>Background <input type="radio" name="position" value="background"
+                        onchange="changePosition(3)"></label>
+            </div>
+            <label>Text: <input type="text" class="text" oninput="changeText()"></label>
+            <label>Text size: <input type="range" class="slider" min="1" max="100" value="16"
+                    oninput="changeSize()"></label>
+            <label>Text color: <input type="color" class="palette" value="#000000" oninput="changeColor()"></label>
+        </div>
+    </main>
+
+    <script type="text/javascript">
+        let count = 1;
+        let imgArea = document.getElementsByClassName("left")[0];
+        let img1 = document.getElementsByTagName("img")[0];
+        let messageArea = document.getElementsByClassName("text-area")[0];
+        let slider = document.getElementsByClassName("slider")[0];
+        let palette = document.getElementsByClassName("palette")[0];
+
+        sources = ["../assets/cricket.jpg", "../assets/walle.jpg"];
+        alts = ["Cricket", "Wall E"];
+
+        function changePic() {
+            img1.src = sources[count];
+            img1.alt = alts[count];
+            count = (count + 1) % 2;
+        }
+
+        function changePosition(pos) {
+            if (pos == 1) {
+                imgArea.style.backgroundImage = "";
+                img1.style.visibility = "visible";
+                img1.style.float = "left";
+            }
+            else if (pos == 2) {
+                imgArea.style.backgroundImage = "";
+                img1.style.visibility = "visible";
+                img1.style.float = "right";
+            }
+
+            else {
+                img1.style.visibility = "hidden";
+                let imageurl = "url('" + sources[(count + 1) % 2] + "')";
+                imgArea.style.backgroundImage = imageurl;
+            }
+        }
+
+        function changeText() {
+            let message = document.getElementsByClassName("text")[0].value;
+            messageArea.innerText = message;
+            changeSize();
+        }
+
+        function changeSize() {
+            let size = slider.value;
+            messageArea.style.fontSize = size + "px";
+        }
+
+        function changeColor() {
+            let col = palette.value;
+            messageArea.style.color = col;
+        }
+    </script>
+</body>
+
+</html>
