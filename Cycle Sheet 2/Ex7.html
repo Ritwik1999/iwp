@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex7</title>
+</head>
+
+<body>
+    <main>
+        <h1>Welcome!!</h1>
+        <button onclick="play()">Begin</button>
+        <section class="scambled">
+            <h3>The scrambled word is:</h3>
+            <h4 class="scrambled-word"></h4>
+        </section>
+        <label>Enter the correct word: <input class="answer" type="text"></label>
+        <button onclick="checkWord()">Submit</button>
+        <h4 class="response"></h4>
+    </main>
+
+    <script type="text/javascript">
+        let scrambledWordArea = document.getElementsByClassName("scrambled-word")[0];
+        let answer = document.getElementsByClassName("answer")[0];
+        let response = document.getElementsByClassName("response")[0];
+
+        let words = ["divide", "stroke", "mammoth", "groan", "volleyball", "tug", "terrible", "report", "jagged"];
+        let wordIndex;
+
+        function play() {
+            wordIndex = Math.floor(Math.random() * (words.length + 1));
+            let word = words[wordIndex];
+            let shuffledWord = shuffle(word);
+            scrambledWordArea.innerText = shuffledWord;
+        }
+
+        function checkWord() {
+            let userAns = answer.value;
+            if (userAns === words[wordIndex]) {
+                response.innerText = "Correct Answer!";
+            } else {
+                response.innerText = "Wrong Answer";
+            }
+        }
+
+        function shuffle(s) {
+            let arr = s.split('');
+            let n = arr.length;
+
+            for (let i = 0; i < n - 1; ++i) {
+                let j = Math.floor(Math.random() * n);
+
+                let temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+
+            s = arr.join('');
+            return s;
+        }
+
+    </script>
+</body>
+
+</html>
