@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/cs2q9.css">
+    <title>Ex7</title>
+</head>
+
+<body>
+    <main>
+        <h1>Welcome!!</h1>
+        <div class="btn-container">
+            <button onclick="play()" disabled>Begin</button>
+        </div>
+        <section class="eval-area" hidden>
+            <div class="stats">
+                <div class="qnum">Question: <span></span></div>
+                <div class="timer">Time remaining: <span></span>s</div>
+            </div>
+            <section class="qans">
+                <p class="question"></p>
+                <ul class="options">
+                    <li>
+                        <label>
+                            <input onchange="setChoosenAnswer(0)" type="radio" name="option" value="0">
+                            <span></span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input onchange="setChoosenAnswer(1)" type="radio" name="option" value="1">
+                            <span></span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input onchange="setChoosenAnswer(2)" type="radio" name="option" value="2">
+                            <span></span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input onchange="setChoosenAnswer(3)" type="radio" name="option" value="3">
+                            <span></span>
+                        </label>
+                    </li>
+                </ul>
+            </section>
+            <div class="btn-container">
+                <button id="next-btn" onclick="nextQuestion()">Next -&gt;</button>
+            </div>
+        </section>
+        <p class="result"></p>
+    </main>
+
+    <script src="../assets/js/cs2q9Qs.js" type="text/javascript"></script>
+    <script src="../assets/js/cs2q9.js" type="text/javascript"></script>
+</body>
+
+</html>

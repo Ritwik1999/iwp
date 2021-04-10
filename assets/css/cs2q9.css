@@ -1,0 +1,65 @@
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    margin: 20px;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main h1 {
+    margin: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3em;
+}
+
+main .btn-container {
+    text-align: center;
+}
+
+main button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+main .stats {
+    margin: 25px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5em;
+}
+
+main .qans {
+    margin: 20px;
+    font-size: 2em;
+    padding: 15px;
+    border: 2px solid maroon;
+}
+
+main .qans .question {
+    margin: 30px;
+}
+
+main .qans .options {
+    list-style-type: none;
+}
+
+main .qans .options li {
+    margin: 10px;
+}
+
+main .qans .options li input {
+    margin: 10px;
+}
+
+main .result {
+    margin-top: 30px;
+    font-size: 1.5em;
+}
