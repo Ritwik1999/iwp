@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/cs2q10.css">
+    <title>Ex10</title>
+</head>
+
+<body>
+
+    <main>
+        <h1>Validate Credit Cards</h1>
+
+        <label>
+            Credit card:
+            <select name="card">
+                <option value="American Express" selected>American Express</option>
+                <option value="Diners Club">Diners Club</option>
+                <option value="Discover">Discover</option>
+                <option value="JCB">JCB</option>
+                <option value="MasterCard">MasterCard</option>
+                <option value="Visa">Visa</option>
+            </select>
+        </label>
+        <label>Number: <input type="text" id="ccNumber"></label>
+
+        <button onclick="validate()">Validate</button>
+        <p id="result" hidden></p>
+    </main>
+
+    <script type="text/javascript">
+        function validate() {
+            let number = document.querySelector("#ccNumber").value;
+            let vendor = document.getElementsByName("card")[0].value;
+            let result = document.getElementById("result");
+
+            let pattern = null;
+            let valid = null;
+
+            if (vendor === "American Express") {
+                pattern = /^(34|37)\d{13}$/gm;                
+            }
+
+            else if (vendor === "Diners Club") {
+                pattern = /^(30[0-5]\d{11})|((36|38)\d{12})$/gm;
+            }
+
+            else if (vendor === "Discover") {
+                pattern = /^(6011\d{12})|(65\d{14})$/gm;
+            }
+
+            else if (vendor === "JCB") {
+                pattern = /^((2131|1800)\d{11})|(35\d{14})$/gm;
+            }
+
+            else if (vendor === "MasterCard") {
+                pattern = /^5[1-5]\d{14}$/gm;
+            }
+
+            else if (vendor === "Visa") {
+                pattern = /^4(\d{15})|(\d{12})$/gm;
+            }
+
+            valid = pattern.test(number);
+            result.hidden = false;
+
+            if (valid) {
+                result.innerText = "Valid credit card number";
+            } else {
+                result.innerText = "Invalid credit card number";
+            }
+        }
+    </script>
+</body>
+
+</html>

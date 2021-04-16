@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/cs2q11.css">
+    <title>Ex11</title>
+</head>
+
+<body>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>First name</th>
+                    <th>Last Name</th>
+                    <th>City</th>
+                    <th>State</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mannix</td>
+                    <td>Bolton</td>
+                    <td>Merizo</td>
+                    <td>Michigan</td>
+                </tr>
+                <tr>
+                    <td>Suki</td>
+                    <td>King</td>
+                    <td>Fairmont</td>
+                    <td>Oklahoma</td>
+                </tr>
+                <tr>
+                    <td>Shelby</td>
+                    <td>English</td>
+                    <td>Durham</td>
+                    <td>Arkansas</td>
+                </tr>
+                <tr>
+                    <td>Portia</td>
+                    <td>Bums</td>
+                    <td>Princeton</td>
+                    <td>Rhode Island</td>
+                </tr>
+                <tr>
+                    <td>Dacey</td>
+                    <td>Young</td>
+                    <td>Covina</td>
+                    <td>South Carolina</td>
+                </tr>
+                <tr>
+                    <td>Clark</td>
+                    <td>Reyes</td>
+                    <td>Grand Rapids</td>
+                    <td>New Jersey</td>
+                </tr>
+                <tr>
+                    <td>Maris</td>
+                    <td>Decker</td>
+                    <td>Sierra Madre</td>
+                    <td>Georgia</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("table tr:odd").css("background-color", "darkgray");
+        });
+    </script>
+</body>
+
+</html>
