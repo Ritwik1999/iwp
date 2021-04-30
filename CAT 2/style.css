@@ -1,0 +1,41 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+form {
+    margin-top: 20px;
+    margin-left: 30%;
+    max-width: 20%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+form * {
+    margin-bottom: 20px;
+}
+
+button {
+    display: inline;
+}

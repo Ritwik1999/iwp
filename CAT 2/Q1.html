@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18BCE2166-Q1</title>
+</head>
+
+<body>
+
+    <h1 id="max"></h1>
+    <h1 id="min"></h1>
+
+    <script type="text/javascript">
+
+        const inputArray = prompt('Enter space separated integers').split(' ').map((a) => {
+            return parseInt(a);
+        });
+
+        document.getElementById("max").innerHTML = `The maximum of the entered numbers is: ${Math.max(...inputArray)}`;
+        document.getElementById("min").innerHTML = `The minimum of the entered numbers is: ${Math.min(...inputArray)}`;
+
+    </script>
+</body>
+
+</html>

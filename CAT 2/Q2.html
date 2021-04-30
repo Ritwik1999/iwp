@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./q2.js" type="text/javascript" defer></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>18BCE2166-Q2</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="grievance-form">
+            <form action="#" id="form" onsubmit="event.preventDefault(); validateForm();">
+                <label>
+                    Name:
+                    <input type="text" name="username" pattern=".{2,}" placeholder="Name" required />
+                </label>
+                <label>
+                    Address:
+                    <input type="text" name="address" pattern=".{2,}" placeholder="Address" required />
+                </label>
+                <label>
+                    Telecom Circle:
+                    <input type="text" name="telecom-circle" pattern=".{2,}" placeholder="Telecom Circle" required />
+                </label>
+                <label>
+                    Email:
+                    <input type="email" name="email" pattern="\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+" placeholder="Email" required />
+                </label>
+                <label>
+                    Grievance Nature:
+                    <select name="nature" required>
+                        <option value="no grievance">No grievance</option>
+                        <option value="huge bills">Huge Bills</option>
+                        <option value="roaming charges">Roaming Charges</option>
+                        <option value="frequent service disruption">Frequent Service Disruption</option>
+                    </select>
+                </label>
+                <div>
+                    <button id="submit-button" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div id="result">
+            <div id="box" hidden>
+                <p>Name: </p>
+                <p>Address: </p>
+                <p>Telecom Circle: </p>
+                <p>Email: </p>
+                <p>Grievance Nature: </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
