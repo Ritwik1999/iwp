@@ -1,0 +1,39 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper img {
+  width: 20%;
+  float: right;
+  height: 20%;
+  margin-left: 60px;
+}
+
+.wrapper .dialogue-section {
+  width: 50%;
+  float: right;
+}
+
+.wrapper .dialogue-section .dialogue:nth-child(odd) {
+  text-align: right;
+}
+
+.wrapper .dialogue-section .dialogue p {
+  display: inline-block;
+  max-width: 45%;
+}
