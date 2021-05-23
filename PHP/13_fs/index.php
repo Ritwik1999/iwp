@@ -30,7 +30,7 @@ echo '<br>';
 file_put_contents('lorem.txt', "First line" . PHP_EOL . $lorem);
 
 echo '<br><br>';
-// file_get_contents from URL
+// file_get_contents from URL; not recommended to do it in this way
 $jsonContent = file_get_contents('https://jsonplaceholder.typicode.com/users');
 $users = json_decode($jsonContent, true);
 echo gettype($users);
