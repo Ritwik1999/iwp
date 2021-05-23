@@ -1,0 +1,8 @@
+include and require operators in php:
+
+> include tries to locate the file, and if the file is not found, it continues executing the rest of the code
+> require tries to locate the file, and if the file is not found, any subsequent code is not executed, and the page crashes
+
+NOTE: If you use include (or require) operators, and include (or require) the same file multiple times, it is rendered multiple times
+
+Use include_once (or require_once) operators to include (or require) files only once, no matter how many times you include (or require) the same file
