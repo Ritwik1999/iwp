@@ -9,7 +9,7 @@ echo __LINE__ . '<br>';
 echo __LINE__ . '<br>';
 
 // Create directory
-mkdir('test');
+// mkdir('test');
 
 // Rename directory
 //rename('test', 'test2');
@@ -45,4 +45,4 @@ file_exists('lorem.txt'); // true
 echo var_dump(filesize('lorem.txt'));
 
 // Delete file
-unlink('lorem.txt');
+// unlink('lorem.txt');

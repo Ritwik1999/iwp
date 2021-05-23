@@ -14,3 +14,6 @@ All php code is first interpreted by the server, then is sent to the client. The
 Tip: To see how the server has rendered the output of the php code, view the page source from the context menu.
 This is because the php server renders the page after evaluating all the php code
 Take note of difference between single quote printing and double quote printing
+
+For xampp in linux (lampp), php configurations can be modified in /opt/lampp/etc/php.ini
+The independent php (not the one that is bundled with xampp) configurations are in /etc/php/7.4/cli/php.ini
