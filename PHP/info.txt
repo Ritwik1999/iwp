@@ -1,0 +1,16 @@
+What is PHP
+    > PHP: Hypertext Preprocessor
+    > Open Source general-purpose scripting language
+    > Server side language
+    > Best suited for web development
+    > Can be embedded into HTML
+    > Interpreted language
+
+Not good for:
+    > Building real time applications
+    > AI and ML applications
+
+All php code is first interpreted by the server, then is sent to the client. The browser renders the page as per the markup sent from the server
+Tip: To see how the server has rendered the output of the php code, view the page source from the context menu.
+This is because the php server renders the page after evaluating all the php code
+Take note of difference between single quote printing and double quote printing
