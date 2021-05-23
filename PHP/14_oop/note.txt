@@ -1,0 +1,2 @@
+Since php 7.4, you can specify data types for class attributes.
+And if the data types are prefixed with a "?" (without quotes), e.g., ?int, the accepted values are int and null
