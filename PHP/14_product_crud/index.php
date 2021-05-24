@@ -3,7 +3,15 @@
 $pdo = new PDO('mysql:host=localhost;port=3306;dbname=products_crud', 'root', '');
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-$statement = $pdo->prepare('SELECT * FROM products ORDER BY create_date DESC;');
+$search = $_GET['search'] ?? '';
+
+if ($search) {
+    $statement = $pdo->prepare('SELECT * FROM products WHERE title LIKE :title ORDER BY create_date DESC;');
+    $statement->bindValue(':title', "%$search%");
+} else {
+    $statement = $pdo->prepare('SELECT * FROM products ORDER BY create_date DESC;');
+}
+
 $statement->execute();
 $products = $statement->fetchAll(PDO::FETCH_ASSOC);
 
@@ -35,6 +43,15 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
         <a href="create.php" class="btn btn-success">Create Product</a>
     </p>
 
+    <form>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Search products" name="search" value="<?php echo $search ?>">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="submit">Search</button>
+            </div>
+        </div>
+    </form>
+
     <table class="table">
         <thead>
             <tr>
@@ -58,8 +75,12 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
                     <td><?php echo $product['price'] ?></td>
                     <td><?php echo $product['create_date'] ?></td>
                     <td>
-                        <button type="button" class="btn btn-sm btn-outline-primary">Edit</button>
-                        <button type="button" class="btn btn-sm btn-outline-danger">Delete</button>
+                        <!-- Refer ../info.txt Line 23 -->
+                        <a href="update.php?id=<?php echo $product['id'] ?>" class="btn btn-sm btn-outline-primary">Edit</a>
+                        <form style="display: inline-block;" action="delete.php" method="POST">
+                            <input type="text" name="id" value="<?php echo $product['id'] ?>" hidden>
+                            <button href="delete.php" type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
+                        </form>
                     </td>
                 </tr>
             <?php } ?>
