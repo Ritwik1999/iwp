@@ -1,0 +1,6 @@
+Difference between Sessions and Cookies
+
+Data saved using sessions is saved on the server side.
+Data saved using cookies is saved on the client side, and that data can be passed to every request and response, which can be used to authenticate and communicate
+
+Cookies are used for Personalization, session mgmt, and tracking
