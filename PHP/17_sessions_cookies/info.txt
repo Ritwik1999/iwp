@@ -1,6 +1,40 @@
 Difference between Sessions and Cookies
 
-Data saved using sessions is saved on the server side.
-Data saved using cookies is saved on the client side, and that data can be passed to every request and response, which can be used to authenticate and communicate
+> A cookie is data stored on the client
+> A session's data is stored on the server (only 1 session per client)
 
 Cookies are used for Personalization, session mgmt, and tracking
+
+How do Cookies work?
+> When you type the URL of the destination Web site in the Address bar of your browser, the address is located and if found successfully, a request is sent to the Web server that hosts the site.
+> If the Web server accepts the request, the Web browser at the client end checks for an existing cookie from the given site.
+> If the cookie is found, the browser sends all the name-value pairs in the cookie to the server as the HTTP header. In addition, the expiration date of the cookie, if any, and a path is also sent to the server along with the name-value pairs. 
+> If the corresponding cookie is not found on the local hard disk, the server is notified about the absence of a cookie. In this case, the server generates a new ID for the client who requested a connection and sends the cookie containing the name-value pair(s) to the requester's Web browser. The browser then stores this cookie on the hard disk of your machine.
+
+To check the cookies set by a particular server, view the application tab in dev tools (Chrome), and to see the request and response cookies per request, locate the file in the Network tab, and select it and navigate to the cookies tab (Chrome).
+
+How long does a cookie exist?
+> Session cookie : the default type; a temporary cookie that is stored only in the browser's memory 
+    When the browser is closed, temporary cookies will be erased
+    Can not be used for tracking long-term information
+    Safer, because no programs other than the browser can access them
+
+> Persistent cookie : one that is stored in a file on the browser's computer 
+    Can track long-term information
+    Potentially less secure, because users (or programs they run) can open cookie files, see/change the cookie values, etc.
+
+Session 
+> An abstract concept to represent a series of HTTP requests and responses between a specific Web browser and server
+HTTP doesn't support the notion of a session, but PHP does
+
+> Sessions are often built on top of cookies: 
+    The only data the client stores is a cookie holding a unique session ID
+    On each page request, the client sends its session ID cookie, and the server uses this to find and retrieve the client's session data
+
+Session Mechanism
+> There are two things that the session mechanism must hang onto: the session ID itself and any associated variable bindings.
+> The session ID is either stored as a cookie on the browser's machine, or it is incorporated into the GET/POST arguments submitted with page requests.
+> The contents of session variables are stored in special files on the server, one file per session ID:
+> The session variables are stored on the web server
+> For XAMPP (Linux), they are stored in ${XAMPP_HOME}/temp/ 
+> The file name is generally sess_${SESSION_ID}
