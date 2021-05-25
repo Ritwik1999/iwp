@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>18BCE2166 Ex1</title>
+    <title>18BCE2166 Ex2</title>
 
     <style>
         body {
