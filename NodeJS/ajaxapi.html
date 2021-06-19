@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API call demo</title>
+</head>
+
+<body>
+    <button>Fetch Data</button>
+    <div class="container">
+        <h1>Users list</h1>
+        <ul id="list"></ul>
+    </div>
+
+    <script>
+        let btn = document.getElementsByTagName("button")[0];
+
+        btn.addEventListener("click", buttonclickhandler);
+
+        function buttonclickhandler() {
+            const xhr = new XMLHttpRequest();
+
+            xhr.open("GET", "https://jsonplaceholder.typicode.com/users", true);
+
+            xhr.onload = function () {
+                if (this.status == 200) {
+                    let obj = JSON.parse(this.responseText);
+                    console.log(obj)
+                    let list = document.getElementById("list");
+                    let str = "";
+
+                    for (const key in obj) {
+                        if (Object.hasOwnProperty.call(obj, key)) {
+                            const name = obj[key].name;
+                            str += `<li>${name}</li>`;
+                        }
+                    }
+
+                    list.innerHTML = str;
+                }
+            }
+
+            xhr.send();
+        }
+    </script>
+</body>
+
+</html>
