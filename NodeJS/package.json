@@ -11,7 +11,9 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "formidable": "^1.2.2",
     "mongodb": "^3.6.9",
-    "mongoose": "^5.12.14"
+    "mongoose": "^5.12.14",
+    "nodemailer": "^6.6.2"
   }
 }

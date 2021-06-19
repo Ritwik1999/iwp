@@ -9,3 +9,4 @@ images*
 FAT
 node_modules
 *.http
+uploads
