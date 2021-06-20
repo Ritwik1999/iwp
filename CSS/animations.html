@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <title>ani</title>
+    <style>
+        #d1 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            transition: width 2s, height 2s;
+            transition-delay: 1s;
+            transition-timing-function: linear;
+        }
+
+        #d1:hover {
+            width: 300px;
+            height: 300px;
+        }
+
+        #d2 {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            position: relative;
+            animation-name: change;
+            animation-duration: 4s;
+            animation-iteration-count: 3;
+        }
+
+        @keyframes change {
+            0% {
+                background-color: yellow;
+                left: 0px;
+            }
+
+            25% {
+                background-color: green;
+                left: 300px;
+            }
+
+            50% {
+                background-color: blue;
+                left: 300px;
+            }
+
+            75% {
+                background-color: blue;
+                left: 0px;
+            }
+
+            100% {
+                background-color: red;
+                left: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div style="width:200px;height:200px;background-color:tomato;border:2px solid
+blue;"></div><br><br>
+    <div style="width:200px;height:200px;background-color:tomato;border:2px solid
+blue;transform:translate(50px,100px);"></div><br><br><br><br>
+    <div style="width:200px;height:200px;background-color:tomato;border:2px solid
+blue;transform:rotate(20deg)"></div><br><br>
+    <div style="width:200px;height:200px;background-color:tomato;border:2px solid
+blue;transform:rotate(-20deg)"></div><br><br>
+    <div style="width:200px;height:200px;background-color:tomato;border:2px solid
+blue;transform:scale(0.5,0.5)"></div><br><br>
+    <div style="width:200px;height:200px;background-color:tomato;border:2px solid
+blue;transform:skew(20deg,10deg)"></div><br><br>
+    <div id="d1"></div><br><br>
+    <div id="d2"></div><br><br>
+</body>
+
+</html>

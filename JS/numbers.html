@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>JavaScript Numbers</h2>
+    <p>Extra large or extra small numbers can be written with scientific (exponent) notation:</p>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <script>
+        var x = 123e19;
+        var y = 123e-5;
+        document.getElementById("demo").innerHTML = x + "<br>" + y;
+
+        var x = "10";
+        var y = "20";
+        var z = x + y;
+        document.getElementById("demo1").innerHTML = z;
+
+        var x = 10;
+        var y = 20;
+        var z = "30";
+        var result = x + y + z;
+        document.getElementById("demo2").innerHTML = result;
+
+        var x = "100";
+        var y = "10";
+        var z = x / y;
+        document.getElementById("demo3").innerHTML = z;
+
+        document.getElementById("demo4").innerHTML = 100 / "Apple";
+
+        var x = NaN;
+        var y = 5;
+        document.getElementById("demo5").innerHTML = x + y;
+
+        var myNumber = 2;
+        var txt = "";
+        while (myNumber != Infinity) {
+            myNumber = myNumber * myNumber;
+            txt = txt + myNumber + "<br>";
+        }
+        document.getElementById("demo6").innerHTML = txt;
+
+        var x = 2 / 0;
+        var y = -2 / 0;
+        document.getElementById("demo7").innerHTML = x + "<br>" + y;
+        var x = 0xFF;
+
+        document.getElementById("demo8").innerHTML = "0xFF = " + x;
+
+        var myNumber = 128;
+        document.getElementById("demo9").innerHTML = "128 = " +
+            myNumber + " Decimal, " +
+            myNumber.toString(16) + " Hexadecimal, " +
+            myNumber.toString(8) + " Octal, " +
+            myNumber.toString(2) + " Binary.";
+
+        var x = 9.656;
+        document.getElementById("demo10").innerHTML =
+            x.toFixed(0) + "<br>" +
+            x.toFixed(2) + "<br>" +
+            x.toFixed(4) + "<br>" +
+            x.toFixed(6);
+
+        var x = 9.656;
+        document.getElementById("demo11").innerHTML =
+            x.toExponential() + "<br>" +
+            x.toExponential(2) + "<br>" +
+            x.toExponential(4) + "<br>" +
+            x.toExponential(6);
+
+        var x = 9.656;
+        document.getElementById("demo12").innerHTML =
+            typeof x.toPrecision() + "<br>" +
+            x.toPrecision(2) + "<br>" +
+            x.toPrecision(4) + "<br>" +
+            x.toPrecision(6);
+
+        document.getElementById("demo13").innerHTML =
+            parseInt("10") + "<br>" +
+            parseInt("10.33") + "<br>" +
+            parseInt("10 6") + "<br>" +
+            parseInt("10 years") + "<br>" +
+            parseInt("years 10");
+
+        document.getElementById("demo14").innerHTML =
+            parseFloat("10") + "<br>" +
+            parseFloat("10.33") + "<br>" +
+            parseFloat("10 6") + "<br>" +
+            parseFloat("20 years") + "<br>" +
+            parseFloat("years 10");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <p id="p5"></p>
+    <p id="p6"></p>
+    <p id="p7"></p>
+    <p id="p8"></p>
+    <p id="p9"></p>
+    <p id="p10"></p>
+    <p id="p11"></p>
+    <p id="p12"></p>
+    <p id="p13"></p>
+    <p id="p14"></p>
+    <p id="p15"></p>
+    <p id="p16"></p>
+    <p id="p17"></p>
+    <p id="p18"></p>
+    <p id="p19"></p>
+    <p id="p20"></p>
+    <script>
+        document.getElementById("p1").innerHTML = Date();
+        var d = new Date();
+        document.getElementById("p2").innerHTML = d;
+        d = new Date("December 11, 2016 11:13:00");
+        document.getElementById("p3").innerHTML = d;
+        d = new Date(86400000);
+        document.getElementById("p4").innerHTML = d;
+        d = new Date(19, 5, 24, 11, 33, 30, 0);
+        document.getElementById("p5").innerHTML = d;
+        d = new Date(99, 5, 24);
+        document.getElementById("p6").innerHTML = d;
+        d = new Date();
+        document.getElementById("p7").innerHTML = d.toString();
+        document.getElementById("p8").innerHTML = d.toUTCString();
+        document.getElementById("p9").innerHTML = d.toDateString();
+        document.getElementById("p10").innerHTML = d.getDate();
+        document.getElementById("p11").innerHTML = d.getDay();
+        document.getElementById("p12").innerHTML = d.getMonth();
+        document.getElementById("p13").innerHTML = d.getFullYear();
+        document.getElementById("p14").innerHTML = d.getHours();
+        document.getElementById("p15").innerHTML = d.getMinutes();
+        document.getElementById("p16").innerHTML = d.getSeconds();
+        document.getElementById("p17").innerHTML = d.getMilliseconds();
+        document.getElementById("p18").innerHTML = d.getTime();
+        var today, someday, text;
+        today = new Date();
+        someday = new Date();
+        someday.setFullYear(2100, 0, 14);
+        if (someday > today) {
+            text = "Today is before January 14, 2100.";
+        } else {
+            text = "Today is after January 14, 2100.";
+        }
+        document.getElementById("p19").innerHTML = text;
+    </script>
+</body>
+
+</html>

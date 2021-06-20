@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <title>JS Strings</title>
+</head>
+
+<body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <p id="p5"></p>
+    <p id="p6"></p>
+    <p id="p7"></p>
+    <p id="p8"></p>
+    <p id="p9"></p>
+    <p id="p10"></p>
+    <p id="p11"></p>
+    <p id="p12"></p>
+    <p id="p13"></p>
+    <p id="p14"></p>
+    <p id="p15"></p>
+    <p id="p16"></p>
+    <p id="p17"></p>
+    <p id="p18"></p>
+    <p id="p19"></p>
+    <p id="p20"></p>
+    <p id="p21"></p>
+    <p id="p22"></p>
+    <script>
+        var a = 'a "str"ing';
+        var b = new String("abc");
+        document.getElementById("p1").innerHTML = a;
+        var s1 = "Mickey Mouse";
+        document.getElementById("p2").innerHTML = s1.length;
+        var s2 = "Happy people are happy because they are happy";
+        document.getElementById("p3").innerHTML = s2.indexOf("happy");
+        document.getElementById("p4").innerHTML = s2.indexOf("happy", 20);
+        document.getElementById("p5").innerHTML = s2.indexOf("world", 20);
+        document.getElementById("p6").innerHTML = s2.lastIndexOf("happy");
+        document.getElementById("p7").innerHTML = s2.search("happy");
+        document.getElementById("p8").innerHTML = s2.search(/happy/i);
+        document.getElementById("p9").innerHTML = s2.slice(17, 24);
+        document.getElementById("p10").innerHTML = s2.slice(-25, -15);
+        document.getElementById("p11").innerHTML = s2.substring(10, 15);
+        document.getElementById("p12").innerHTML = s2.substr(17, 24);
+        document.getElementById("p13").innerHTML = s2.slice(17);
+        document.getElementById("p14").innerHTML = s2.match(/happ/gi);
+        document.getElementById("p15").innerHTML = s2.replace(/happy/gi, "paranoid");
+        document.getElementById("p16").innerHTML = s2.toUpperCase();
+        document.getElementById("p17").innerHTML = s2.toLowerCase();
+        document.getElementById("p18").innerHTML = s2.charAt(18);
+        document.getElementById("p19").innerHTML = s2.charCodeAt(18);
+        s2[0] = "A";    // in js, pritive types are immutable, and string is an immutable type
+        document.getElementById("p20").innerHTML = s2;
+        var s3 = s2.split(" ");
+        document.getElementById("p21").innerHTML = s3;  // s3 is an array, but it is printed the way it is due to its toString method
+        s3 = "Happy";
+        var s4 = s3.split("");
+        document.getElementById("p22").innerHTML = typeof s4 + "; Length: " + s4.length;
+    </script>
+</body>
+
+</html>
