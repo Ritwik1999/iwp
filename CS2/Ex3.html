@@ -11,7 +11,7 @@
 <body>
     <script type="text/javascript">
 
-        [distance, price, mileage] = prompt('Enter miles, cost and consumption').split(' ').map((a) => {
+        [distance, price, mileage] = prompt('Enter miles, cost and consumption').trim().replace(/\s+/gim, " ").split(' ').map((a) => {
             return parseFloat(a);
         });
 

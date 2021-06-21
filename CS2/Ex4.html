@@ -35,7 +35,7 @@
             }
         }
 
-        let count = prompt("How many happy numbers do you want to print?", 0);
+        let count = prompt("How many happy numbers do you want to print?", 0).trim().replace(/\s+/gim, " ");
         count = parseInt(count);
         let counter = 0;
         let num = 1;

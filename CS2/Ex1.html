@@ -9,7 +9,7 @@
 <body>
     <script type="text/javascript">
         
-        const inputArray = prompt('Enter space separated value').split(' ').map((a) => {
+        const inputArray = prompt('Enter space separated value').trim().replace(/\s+/gim, " ").split(' ').map((a) => {
             return parseInt(a);
         });
 
