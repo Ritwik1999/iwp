@@ -6,8 +6,11 @@ $string = '';
 $palindrome_result = null;
 $bgcolor_code = 'w';
 $bgcolor = 'white';
+// var_dump($_POST['submit']);
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if (isset($_POST['submit'])) {
+    var_dump($_POST['submit']);
+
     $username = $_POST['username'];
     $bgcolor_code = $_POST['bgcolor'];
     $time = (int)date("H");
@@ -109,7 +112,7 @@ function is_palindrome($s)
             <label>String to check if it is Palindrome</label>
             <input type="text" class="form-control" name="palindrome" value="<?php echo $string ?>" required>
         </div>
-        <button class="btn btn-outline-primary" type="submit">Submit</button>
+        <button class="btn btn-outline-primary" type="submit" name="submit" value="submit">Submit</button>
     </form>
     <?php if (!($palindrome_result === null)) { ?>
         <h1>
